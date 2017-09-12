@@ -1,0 +1,124 @@
+[
+{
+    "model": "cars.car",
+    "pk": 1,
+    "fields": {
+        "model": 1,
+        "color": "Red"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 2,
+    "fields": {
+        "model": 2,
+        "color": "Blue"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 3,
+    "fields": {
+        "model": 1,
+        "color": "Green"
+    }
+},
+{
+    "model": "cars.car",
+    "pk": 4,
+    "fields": {
+        "model": 2,
+        "color": "Black"
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 1,
+    "fields": {
+        "name": "focus",
+        "brand": 2,
+        "year": 1
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 2,
+    "fields": {
+        "name": "Ibiza",
+        "brand": 1,
+        "year": 1
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 3,
+    "fields": {
+        "name": "Edge",
+        "brand": 2,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 4,
+    "fields": {
+        "name": "GT",
+        "brand": 2,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 5,
+    "fields": {
+        "name": "Tourneo",
+        "brand": 2,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 6,
+    "fields": {
+        "name": "Toledo",
+        "brand": 1,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 7,
+    "fields": {
+        "name": "Ateca",
+        "brand": 1,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 8,
+    "fields": {
+        "name": "Alhambra",
+        "brand": 1,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 9,
+    "fields": {
+        "name": "Le\u00f3n",
+        "brand": 1,
+        "year": 2017
+    }
+},
+{
+    "model": "cars.model",
+    "pk": 10,
+    "fields": {
+        "name": "Arona",
+        "brand": 1,
+        "year": 2017
+    }
+}
+]
