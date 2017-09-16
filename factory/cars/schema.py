@@ -1,6 +1,9 @@
-from graphene_django import DjangoObjectType
+# encoding: utf-8
+from __future__ import absolute_import, print_function, unicode_literals
+
 import graphene
 from cars.models import Car as CarModel, Model as ModelModel, Brand as BrandModel
+from graphene_django import DjangoObjectType
 
 
 class Car(DjangoObjectType):
@@ -12,7 +15,6 @@ class Car(DjangoObjectType):
 
 
 class CreateCar(graphene.Mutation):
-
     class Arguments:
         color = graphene.String()
         model = graphene.Int()
@@ -27,13 +29,11 @@ class CreateCar(graphene.Mutation):
 
 
 class Model(DjangoObjectType):
-
     class Meta:
         model = ModelModel
 
 
 class Brand(DjangoObjectType):
-
     class Meta:
         model = BrandModel
 
@@ -67,5 +67,6 @@ class Query(graphene.ObjectType):
             return CarModel.objects.get(color=color)
 
         return None
+
 
 schema = graphene.Schema(query=Query, mutation=MyMutations)

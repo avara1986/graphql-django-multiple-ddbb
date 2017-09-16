@@ -1,8 +1,9 @@
-from django.contrib import admin
+# encoding: utf-8
+from __future__ import absolute_import, print_function, unicode_literals
 
+from cars.models import Car, Model, Brand
 # Register your models here.
 from django.contrib import admin
-from cars.models import Car, Model, Brand
 
 
 class CarAdmin(admin.ModelAdmin):
@@ -15,6 +16,7 @@ class ModelAdmin(admin.ModelAdmin):
 
 class BrandAdmin(admin.ModelAdmin):
     pass
+
 
 admin.site.register(Car, CarAdmin)
 admin.site.register(Model, ModelAdmin)

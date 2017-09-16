@@ -1,2 +1,4 @@
 venv
 factory/db.sqlite3
+factory/db.sqlite3_brands
+*.pyc
