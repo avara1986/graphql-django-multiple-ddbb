@@ -3,38 +3,54 @@
 
 Implementación de Python de [Paradigma: Graphql + Spring Boot](https://github.com/paradigmadigital/graphql-spring-boot) 
 
-## Frameworks utilizados:
+## Librerías utilizadas:
 
 - [Django](https://github.com/django/django)
 - [Graphene-django](https://github.com/graphql-python/graphene-django) 
-
-
-## Requisitos
-
-Python 3.x
-
-Django
-
-graphene-django
-
-Ver requirements.txt
+- [Django-debug-toolbar](https://github.com/jazzband/django-debug-toolbar) 
 
 ## Configuración
 
-
-```
+```bash
 virtualenv --python=python3.6 venv
 source venv/bin/activate
 pip install -r requirements.txt
 cd factory
 python manage.py migrate
-python manage.py loaddata cars/fixtures/01_initial_data.json 
+python manage.py migrate --database=brands_ddbb
+```
 
+```bash
+sqlite3 db.sqlite3_brands
+```
+
+```sql
+insert into cars_brand (name) values("Seat");
+insert into cars_brand (name) values("Ford");
+```
+
+```cmd
+sqlite3 db.sqlite3
+```
+
+```sql
+insert into cars_model (name, year, brand_id) values("Ibiza", 2015, 1);
+insert into cars_model (name, year, brand_id) values("Arona", 2014, 1);
+insert into cars_model (name, year, brand_id) values("León", 2013, 1);
+insert into cars_model (name, year, brand_id) values("Alhambra", 2012, 1);
+insert into cars_model (name, year, brand_id) values("Ateca", 2011, 1);
+insert into cars_model (name, year, brand_id) values("Toledo", 2017, 1);
+insert into cars_model (name, year, brand_id) values("Tourneo", 2001, 2);
+insert into cars_model (name, year, brand_id) values("GT", 2017, 2);
+```
+
+```bash
+python manage.py loaddata cars/fixtures/01_initial_data.json 
 ```
 
 ## Ejecución
 
-```
+```bash
 python manage.py runserver
 ```
 
