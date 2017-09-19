@@ -47,6 +47,15 @@ insert into cars_model (name, year, brand_id) values("GT", 2017, 2);
 ```bash
 python manage.py loaddata cars/fixtures/01_initial_data.json 
 ```
+```python
+client = MongoClient('127.0.0.1', 28000)
+
+db = client.factory
+
+brands = db.brands
+brands.insert_one({"name": "seat"})
+brands.insert_one({"name": "Ford"})
+```
 
 ## Ejecución
 

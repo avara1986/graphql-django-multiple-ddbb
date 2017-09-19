@@ -44,14 +44,17 @@ class MyMutations(graphene.ObjectType):
 
 class Query(graphene.ObjectType):
     cars = graphene.List(Car)
+    car = graphene.Field(Car,
+                         id=graphene.Int(),
+                         color=graphene.String())
+
     models = graphene.List(Model)
+
+
 
     def resolve_cars(self, info, **kwargs):
         return CarModel.objects.all().prefetch_related('model', 'model__brand')
 
-    car = graphene.Field(Car,
-                         id=graphene.Int(),
-                         color=graphene.String())
 
     def resolve_models(self, info, **kwargs):
         # We can easily optimize query count in the resolve method
